@@ -1,0 +1,74 @@
+---
+import ExpCard from "./ExpCard.astro";
+---
+
+<section>
+  <div class="experience">
+    <h1>Experience</h1>
+
+    <ExpCard
+      jobname="Cypher"
+      jobcharge="Fullstack Developer"
+      jobdate="2022 - Present"
+      joblogo="https://developer.microsoft.com/_devcom/images/logo-ms-social.png"
+    />
+
+    <ExpCard
+      jobname="Cypher"
+      jobcharge="Fullstack Developer"
+      jobdate="2022 - Present"
+      joblogo="https://developer.microsoft.com/_devcom/images/logo-ms-social.png"
+    />
+
+    <ExpCard
+      jobname="Cypher"
+      jobcharge="Fullstack Developer"
+      jobdate="2022 - Present"
+      joblogo="https://developer.microsoft.com/_devcom/images/logo-ms-social.png"
+    />
+  </div>
+
+  <div class="text-lg">
+    <p>
+      Soy un desarrollador web con experiencia en React, Three.js, Astro y otras
+      tecnologías.
+    </p>
+    <p>
+      He participado en proyectos como Mincraft Clone, una réplica minimalista
+      del famoso juego, Dolar Ve, una aplicación que muestra el valor del dólar
+      en Venezuela, JSRunner, un entorno de ejecución de código JavaScript, y
+      Kings League, un juego de cartas colaborativo.
+    </p>
+    <p>
+      Me gusta contribuir a proyectos de código abierto y aprender nuevas
+      herramientas. Puedes ver mis repositorios en GitHub:
+      https://github.com/maikCyphlock
+    </p>
+  </div>
+</section>
+
+<style>
+  @media screen and (max-width: 700px) {
+    section {
+      display: flex !important;
+      flex-direction: column;
+      padding: 1rem !important;
+    }
+  }
+  .text-lg {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  .experience {
+    display: grid;
+    gap: 2rem;
+  }
+  section {
+    display: grid;
+    gap: 3rem;
+    z-index: 0;
+    background-color: var(--black);
+    grid-template-columns: 1fr 1fr;
+    padding: var(--container-margin);
+  }
+</style>
