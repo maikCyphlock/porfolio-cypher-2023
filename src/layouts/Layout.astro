@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --darkgreen: #7db240;
+    --white: #eafaff;
+    --darkgrey: #5c6061;
+    --black: hsl(0, 4%, 5%);
+    --container-margin: 5rem;
+  }
+  @layer base,theme,layouts,components,utilities;
+  @font-face {
+    font-family: "Yatra One";
+    src: url("../assets/YatraOne-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../assets/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+
+    font-style: normal;
+  }
+
+  @layer base {
+    body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      max-width: 1400px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      font-family: "Montserrat", system-ui, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      background-size: 224px;
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  }
+</style>
