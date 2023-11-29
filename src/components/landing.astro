@@ -1,0 +1,107 @@
+<div class="landing">
+  <main class="showcase">
+    <h1 class="heading">Maikol Douglas</h1>
+    <h2 class="subheading">
+      based designer, Fullstack developer, crafting experiences
+    </h2>
+  </main>
+  <div class="bg">
+    <div class="glow-red"></div>
+    <div class="glow-yellow"></div>
+    <div class="glow-blue"></div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --heading-lg-size: 120px;
+    --heading-md-size: 80px;
+  }
+  .bg {
+    position: absolute;
+    background: url(../assets/img/Texture.png);
+    z-index: 0;
+    width: 100%;
+    mix-blend-mode: lighten;
+    height: 100%;
+    overflow: hidden;
+  }
+  .glow-red {
+    top: -329px;
+    left: 67px;
+    position: absolute;
+    width: 33.75rem;
+    height: 33.75rem;
+    flex-shrink: 0;
+    border-radius: 41.5rem;
+    background: #9b2226;
+    filter: blur(350px);
+  }
+
+  .glow-yellow {
+    position: absolute;
+    width: 33.75rem;
+    height: 33.75rem;
+    left: 862px;
+    top: -121px;
+    flex-shrink: 0;
+    border-radius: 33.75rem;
+    background: #ee9b00;
+    filter: blur(350px);
+  }
+
+  .glow-blue {
+    position: absolute;
+    top: 235px;
+    left: 1132px;
+    width: 91.75rem;
+    height: 91.75rem;
+    flex-shrink: 0;
+    border-radius: 40.1875rem;
+    background: #005f73;
+    filter: blur(350px);
+  }
+
+  .subheading {
+    color: color-mix(in srgb, var(--darkgrey) 40%, var(--white) 60%);
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: calc(var(--heading-lg-size) / 3);
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+  }
+  .heading {
+    color: #eafaff;
+    text-align: center;
+    font-family: Yatra One;
+    font-size: var(--heading-lg-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.9; /* 151.864px */
+    letter-spacing: -4.5px;
+  }
+  .showcase {
+    max-width: 60dvw;
+    z-index: 1;
+  }
+  .landing {
+    min-height: 90dvh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    overflow: hidden;
+  }
+
+  @media (width < 600px) {
+    .showcase {
+      max-width: 100dvw;
+    }
+    .heading {
+      font-size: var(--heading-md-size);
+    }
+    .subheading {
+      font-size: calc(var(--heading-md-size) / 3);
+    }
+  }
+</style>
