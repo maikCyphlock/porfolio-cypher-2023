@@ -1,0 +1,45 @@
+---
+const { jobname, jobcharge, jobdate, joblogo } = Astro.props;
+---
+
+<article class="card">
+  <span class="job-date">{jobdate}</span>
+  <div class="card-content">
+    <img src={joblogo} class="job-logo" alt="" />
+    <div class="job-info">
+      <h3 class="job-charge">{jobcharge}</h3>
+      <h1 class="job-name">{jobname}</h1>
+    </div>
+  </div>
+</article>
+
+<style>
+  .card {
+    display: grid;
+    gap: 1rem;
+    z-index: 1;
+  }
+  .card-content {
+    display: flex;
+    gap: 1rem;
+  }
+  .job-date {
+    font-weight: 400;
+    color: var(--darkgrey);
+  }
+  .job-logo {
+    max-width: 64px;
+    border-radius: 1rem;
+  }
+
+  .job-charge {
+    font-weight: 300;
+  }
+  .job-name {
+  }
+  @container (width < 600px) {
+    .card {
+      display: none;
+    }
+  }
+</style>
